@@ -1,0 +1,22 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(153, 201, 183);
+	font-size: 10px;
+}
+
+nav {
+	background-color: black;
+	height: 60px;
+	margin-top: 0px;
+}
+
+button {
+	padding: 10px;
+	font-size: 15px;
+	margin: 10px;
+}
