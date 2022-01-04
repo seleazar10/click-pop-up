@@ -35,6 +35,8 @@ button {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	z-index: 10;
 }
 
 .pop-header {
@@ -58,4 +60,15 @@ button {
 
 .hidden {
 	display: none;
+}
+
+.overlay {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 5;
 }
