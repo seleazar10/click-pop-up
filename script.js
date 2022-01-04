@@ -2,6 +2,7 @@ let navBtnPopUpArr = document.querySelectorAll('.nav-btn');
 let popUpCloseBtnArr = document.querySelectorAll('.pop-x-btn ');
 let popUpToClose;
 let currIDClicked;
+let currentOpenedPopUp = document.getElementById(currIDClicked);
 
 //display pop up window
 for (let i = 0; i < navBtnPopUpArr.length; i++) {
@@ -20,7 +21,7 @@ let displayPopUp = function (popUpId) {
 	currIDClicked = `pop-up-${popUpId.id}`;
 	popUpToClose = document.getElementById(currIDClicked);
 	popUpToClose.classList.remove('hidden');
-
+	//
 	console.log(`current id ${currIDClicked}`, popUpToClose);
 };
 
@@ -29,10 +30,15 @@ let closePopUpWindFunc = function (popUpCloseId) {
 	currIDClicked = `pop-up-${btnClsdId.slice(8)}`;
 	popUpToClose = document.getElementById(currIDClicked);
 	popUpToClose.classList.add('hidden');
-
+	//
 	console.log(`current id ${currIDClicked}`, popUpToClose);
 };
 
 let closeUpOnDOM = document.addEventListener('keydown', function (e) {
-	console.log(e);
+	let currentOpenedPopUp = document.getElementById(currIDClicked);
+	if (e.key === 'Escape' && !currentOpenedPopUp.classList.contains('hidden')) {
+		currentOpenedPopUp.classList.add('hidden');
+
+		// closePopUpWindFunc(popUpCloseBtnArr[i]);
+	}
 });
