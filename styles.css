@@ -20,3 +20,42 @@ button {
 	font-size: 15px;
 	margin: 10px;
 }
+
+.pop-x-btn {
+	display: inline-block;
+	float: right;
+}
+
+.pop-up {
+	height: 180px;
+	width: 400px;
+	background-color: coral;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pop-header {
+	display: inline-block;
+	/* float: left; */
+}
+
+.clearfix {
+	overflow: auto;
+}
+
+.clearfix::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+.pop-msg-container {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
